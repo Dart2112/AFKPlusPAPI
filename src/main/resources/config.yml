@@ -1,6 +1,13 @@
+#The values for AFKPlus_Status
 status:
+  #If the player is AFK
   true: "True"
+  #If the player isn't afk
   false: "False"
+#The values for AFKPlus_AFKTime
 afktime:
-  notafk: "Not AFK"
+  #The number of minutes that the player has been AFK will be placed in front of this
+  #e.g. "1.5 minutes" will be the output for 1 minute and 30 seconds
   minutes: "minutes"
+  #If the player isn't afk
+  notafk: "Not AFK"

@@ -6,6 +6,9 @@ import net.lapismc.afkplus.playerdata.AFKPlusPlayer;
 import net.lapismc.afkplus.util.core.placeholder.PlaceholderAPIExpansion;
 import org.bukkit.entity.Player;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class PAPIHook extends PlaceholderAPIExpansion {
 
     private final AFKPlusPlayerAPI api;
@@ -29,8 +32,9 @@ public class PAPIHook extends PlaceholderAPIExpansion {
                 return plugin.getConfig().getString("afktime.notafk");
             }
             long millis = System.currentTimeMillis() - afkStart;
-            Long minutes = millis / 1000 / 60;
-            return minutes + " " + plugin.getConfig().getString("afktime.minutes");
+            Double minutes = millis / 1000.0 / 60.0;
+            NumberFormat numberFormat = new DecimalFormat("#.##");
+            return numberFormat.format(minutes) + " " + plugin.getConfig().getString("afktime.minutes");
         }
         return null;
     }
