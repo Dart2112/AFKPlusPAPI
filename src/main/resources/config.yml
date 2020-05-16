@@ -1,0 +1,6 @@
+status:
+  true: "True"
+  false: "False"
+afktime:
+  notafk: "Not AFK"
+  minutes: "minutes"
