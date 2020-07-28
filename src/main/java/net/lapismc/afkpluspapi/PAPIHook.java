@@ -22,10 +22,10 @@ public class PAPIHook extends PlaceholderAPIExpansion {
 
     @Override
     public String onPlaceholderRequest(Player player, String identifier) {
-        if ("AFKPlus_Status".equalsIgnoreCase(identifier)) {
+        if ("Status".equalsIgnoreCase(identifier)) {
             return api.getPlayer(player).isAFK() ? plugin.getConfig().getString("status.true")
                     : plugin.getConfig().getString("status.false");
-        } else if ("AFKPlus_AFKTime".equalsIgnoreCase(identifier)) {
+        } else if ("AFKTime".equalsIgnoreCase(identifier)) {
             AFKPlusPlayer p = api.getPlayer(player);
             Long afkStart = p.getAFKStart();
             if (afkStart == null) {
