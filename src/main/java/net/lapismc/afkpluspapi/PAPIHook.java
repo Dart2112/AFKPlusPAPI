@@ -52,4 +52,17 @@ public class PAPIHook extends PlaceholderAPIExpansion {
         }
         return null;
     }
+
+    private List<Duration> reduceDurationList(List<Duration> durationList) {
+        while (durationList.size() > plugin.getConfig().getInt("TotalTimeAFK.numberOfTimeUnits")) {
+            Duration smallest = null;
+            for (Duration current : durationList) {
+                if (smallest == null || smallest.getUnit().getMillisPerUnit() > current.getUnit().getMillisPerUnit()) {
+                    smallest = current;
+                }
+            }
+            durationList.remove(smallest);
+        }
+        return durationList;
+    }
 }
