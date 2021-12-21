@@ -1,4 +1,5 @@
 <component name="libraryTable">
+<<<<<<<< HEAD:.idea/libraries/Maven__org_spigotmc_spigot_api_1_18_1_R0_1_SNAPSHOT.xml
   <library name="Maven: org.spigotmc:spigot-api:1.18.1-R0.1-SNAPSHOT">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.18.1-R0.1-SNAPSHOT/spigot-api-1.18.1-R0.1-20211220.214809-10.jar!/" />
@@ -8,6 +9,17 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.18.1-R0.1-SNAPSHOT/spigot-api-1.18.1-R0.1-20211220.214809-10-sources.jar!/" />
+========
+  <library name="Maven: org.spigotmc:spigot-api:1.16.4-R0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.16.4-R0.1-SNAPSHOT/spigot-api-1.16.4-R0.1-20201203.083325-28.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.16.4-R0.1-SNAPSHOT/spigot-api-1.16.4-R0.1-20201203.083325-28-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.16.4-R0.1-SNAPSHOT/spigot-api-1.16.4-R0.1-20201203.083325-28-sources.jar!/" />
+>>>>>>>> origin/master:.idea/libraries/Maven__org_spigotmc_spigot_api_1_16_4_R0_1_SNAPSHOT.xml
     </SOURCES>
   </library>
 </component>

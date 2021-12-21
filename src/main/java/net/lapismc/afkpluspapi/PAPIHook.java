@@ -6,9 +6,13 @@ import net.lapismc.afkplus.playerdata.AFKPlusPlayer;
 import net.lapismc.lapiscore.placeholder.PlaceholderAPIExpansion;
 import org.bukkit.OfflinePlayer;
 import org.jetbrains.annotations.NotNull;
+import org.ocpsoft.prettytime.Duration;
+import org.ocpsoft.prettytime.PrettyTime;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Date;
+import java.util.List;
 
 public class PAPIHook extends PlaceholderAPIExpansion {
 
@@ -36,6 +40,15 @@ public class PAPIHook extends PlaceholderAPIExpansion {
             Double minutes = millis / 1000.0 / 60.0;
             NumberFormat numberFormat = new DecimalFormat("#.##");
             return numberFormat.format(minutes) + " " + plugin.getConfig().getString("afktime.minutes");
+        } else if ("TotalTimeAFK".equalsIgnoreCase(identifier)) {
+            AFKPlusPlayer p = api.getPlayer(player);
+            //Get the total time in milliseconds
+            long totalTime = p.getTotalTimeAFK();
+            //Get the list of durations for this time difference, reduce that list to the configured amount
+            List<Duration> totalTimeDurations = reduceDurationList(new PrettyTime(
+                    new Date(0)).calculatePreciseDuration(new Date(totalTime)));
+            //Get pretty time to format the remaining durations without future or past context
+            return new PrettyTime().formatDuration(totalTimeDurations);
         }
         return null;
     }

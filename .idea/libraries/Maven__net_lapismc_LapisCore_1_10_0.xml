@@ -1,4 +1,5 @@
 <component name="libraryTable">
+<<<<<<<< HEAD:.idea/libraries/Maven__net_lapismc_LapisCore_1_10_0.xml
   <library name="Maven: net.lapismc:LapisCore:1.10.0">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/net/lapismc/LapisCore/1.10.0/LapisCore-1.10.0.jar!/" />
@@ -8,6 +9,17 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/net/lapismc/LapisCore/1.10.0/LapisCore-1.10.0-sources.jar!/" />
+========
+  <library name="Maven: net.lapismc:LapisCore:1.7.10">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/lapismc/LapisCore/1.7.10/LapisCore-1.7.10.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/net/lapismc/LapisCore/1.7.10/LapisCore-1.7.10-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/lapismc/LapisCore/1.7.10/LapisCore-1.7.10-sources.jar!/" />
+>>>>>>>> origin/master:.idea/libraries/Maven__net_lapismc_LapisCore_1_7_10.xml
     </SOURCES>
   </library>
 </component>
