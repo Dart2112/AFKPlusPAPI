@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AFKPlusPAPI.iml" filepath="$PROJECT_DIR$/AFKPlusPAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/afkpluspapi.iml" filepath="$PROJECT_DIR$/afkpluspapi.iml" />
     </modules>
   </component>
 </project>
