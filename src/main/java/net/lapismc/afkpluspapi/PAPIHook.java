@@ -6,7 +6,9 @@ import net.lapismc.afkplus.playerdata.AFKPlusPlayer;
 import net.lapismc.afkplus.util.core.placeholder.PlaceholderAPIExpansion;
 import net.lapismc.afkplus.util.prettytime.Duration;
 import net.lapismc.afkplus.util.prettytime.PrettyTime;
+import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -48,6 +50,16 @@ public class PAPIHook extends PlaceholderAPIExpansion {
                     new Date(0)).calculatePreciseDuration(new Date(totalTime)));
             //Get pretty time to format the remaining durations without future or past context
             return new PrettyTime().formatDuration(totalTimeDurations);
+        } else if ("PlayersAFK".equalsIgnoreCase(identifier)) {
+            int AFKPlayerCount = 0;
+            for (Player p : Bukkit.getOnlinePlayers()) {
+                if (api.getPlayer(p.getUniqueId()).isAFK())
+                    AFKPlayerCount++;
+            }
+            if (AFKPlayerCount == 0)
+                return plugin.getConfig().getString("PlayersCurrentlyAFK.Zero");
+            else
+                return String.valueOf(AFKPlayerCount);
         }
         return null;
     }

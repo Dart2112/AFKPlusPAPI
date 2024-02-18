@@ -12,8 +12,11 @@ afktime:
   #If the player isn't afk
   notafk: "Not AFK"
 TotalTimeAFK:
-  #Prints a human readable string of how long the player has been AFK in total
+  #Prints a human-readable string of how long the player has been AFK in total
   #e.g. 1 day 3 hours 23 minutes
   #This is how many of the largest time units should be printed
   #e.g. a value of 2 would shorten the above example to 1day 3 hours
   numberOfTimeUnits: 2
+PlayersCurrentlyAFK:
+  #This placeholder will show the number of currently AFK players, the below number is what should be displayed when no players are currently AFK
+  Zero: "None"
