@@ -4,8 +4,11 @@ import net.lapismc.afkplus.AFKPlus;
 import net.lapismc.afkplus.api.AFKPlusPlayerAPI;
 import net.lapismc.afkplus.playerdata.AFKPlusPlayer;
 import net.lapismc.lapiscore.placeholder.PlaceholderAPIExpansion;
+import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
+import org.ocpsoft.prettytime.Duration;
+import org.ocpsoft.prettytime.PrettyTime;
 
 import java.util.Date;
 import java.util.List;
@@ -22,7 +25,7 @@ public class PAPIHook extends PlaceholderAPIExpansion {
     }
 
     @Override
-    public String onRequest(OfflinePlayer player, @NotNull String identifier) {
+    public String onRequest(OfflinePlayer player, String identifier) {
         if ("Status".equalsIgnoreCase(identifier)) {
             return api.getPlayer(player).isAFK() ? plugin.getConfig().getString("status.true")
                     : plugin.getConfig().getString("status.false");
