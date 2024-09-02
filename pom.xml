@@ -6,7 +6,7 @@
 
     <groupId>net.lapismc</groupId>
     <artifactId>afkpluspapi</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <name>AFKPlusPAPI</name>
