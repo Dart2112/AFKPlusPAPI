@@ -3,7 +3,7 @@ package net.lapismc.afkpluspapi;
 import net.lapismc.afkplus.AFKPlus;
 import net.lapismc.afkplus.api.AFKPlusPlayerAPI;
 import net.lapismc.afkplus.playerdata.AFKPlusPlayer;
-import net.lapismc.lapiscore.placeholder.PlaceholderAPIExpansion;
+import net.lapismc.afkplus.util.core.placeholder.PlaceholderAPIExpansion;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
